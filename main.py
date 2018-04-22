@@ -5,10 +5,12 @@ class Solution(object):
         :type magazine: str
         :rtype: bool
         """
-        
-        for letter in ransomNote:    
-            if letter in list(magazine):              
-                list(magazine).remove(letter)               
+        magazine = list(magazine) 
+        for ch in ransomNote:
+            if ch in magazine:              
+                magazine.remove(ch)             
+                
             else:
                 return False
+
         return True
